@@ -1,0 +1,127 @@
+COGNIZANT
+=========
+1) Constructor injection or Setter injection => what is the difference (not syntax wise), when to use which.
+2) Hibernate - explain the Caching mechanism. => what is cache -> cache is representation of database near application.
+    * first level cache -> also called as session cache (by default enabled, and we can't disable) -> objects save in session -> once closes the session all will be discarded.
+    * second level cache -> (global session) need to implement provider
+    * when will cache expires -> first level cache expires when session expires. -> second level cache expiration can be configured in configuration file.
+3) What are the advantages of ORM?
+4) What is meant by Dialect?
+5) What is meant by immutable class? the class which can't be modified is called immutable class => example -> String, all Wrapper classes
+6) I have a class called Employee, and it has firstName and lastName variables. How you convert it to immutable class?
+    * declare class as final, declare the variables as private and final, to initialize use constructor, and write getter method and don't write setter method.
+7) As you can't modify immutable class, then what is the use of immutable class.
+8) What is the purpose of hashcode and equals methods in Object class?
+9) Have you used ConcurrentHashMap ?
+10) What is advantage of Restful web services over SOAP web services?
+11) Security wise which is best (soap or rest) ?
+12) What kind of design patterns you use so far? -> singeton, factory, j2ee-> mvc, frontcontroller, dao, intercepting filters etc..
+13) what is advantages of design patterns, why we have to use? -> design patterns give specific solution to specific type of problem.
+14)
+
+CISCO
+=====
+1) What is immutble class -> once created, the state of class can't be modified.
+2) How you achieve that?
+3) I have a class employee with variables like name, age, address, etc.. Now I want compare employee with name and age, how you can achieve that?
+4) Select all employees order by name and age (i want sort by both)?
+5) What is diff between HashSet and LinkedHashSet? => linkedhashset will be stored elemnts in order.
+6) Is there collection key-value pair and key has to be in sorted order? yes TreeMap.
+7) Suppose if I add the employee object to treemap, what would be the sorting? => it will give classcast exception, your employee key object must be comparable. emloyee class has to implement comparable interface.
+8) What is the diff between wait and sleep? => in sleep thread will not release lock but wait, so we have to call wait method from synchronized context only.
+9) what are the bean scopes are avilable in Spring => singleton, prototype, request, session, global session.
+10) what is the diff between singleton and globalsession? => global session will be used in portlet..
+11) what is the diff between prototype and request?  => prototype - each time new object will be created.
+12) What is lazyloading?
+13) what is the cascade attribute? =>
+14) what are the values for cascade?
+15)
+
+MPHASIS
+=======
+1) two exceptions, one parent and one child exception. I have class A with m1(which throws parent exception) and m2 (which throws child exception).
+    Now I am creating instance of class A and calling m1 method in try catch block, in catch block I am catching child exception.
+    Now will this code compiles or not? => it will not compile, you need to catch parent exception.
+2) What are the various stats of Hibernate Objects? => Transient , Persistent and Detached.
+3) I have a table in database with id, name, age, department. Now I created a session and created employee object with id-1, name-dharmendra, age-20 and commited and detached.
+    Now some one modified age to 25 in database. After 10 min I reattached the detached object and changed the age to 23 and merged and commited.
+    Now What will be the age value in database.
+4) Same programme, while merging I changed both id and age, Now what will be the values in database. (id is application generated.) -> will throw an exception?
+5) How does hibernate work on objects?
+6) How you aproch from requirements to build an application.
+7) why do you need interfaces? (you got web, services, dao, database, then why do you need interfaces).
+8) what are your negative points from your coding, etc..
+9) Have you worked with logging.
+10) Are you independent in coding?
+
+NIIT
+====
+1) Have you used any tools for testing web services.
+2) which protocol you used in your web services.
+3) what is the diff between jdk and jre.
+4) what is the diff between jar and war file? => war contains web content.
+5) what tool you used for moving war file to production server?
+6) what is the diff between abstract class and interface, give real example. In what scenario you use which one.
+7) what is serialization?
+8) what is diff between transient and static in serialization?
+9) what is checked and unchecked exception.
+10) why we use exception?
+11) what is the finally block? if return from try block, then will finally block will be called?
+12) what is synchronization? what is diff between runnable and Thread?
+13) which java version you are using? what are the
+      new features in java 1.5 => Enum new keyword, Hexadecimal floting point, Enhanced for loop,
+        variable arguments, generics, scanner class, formatter class, getenv method in system class, autoboxing.
+14) what is autoboxing.
+15) what are new features in java 6 => not much, improved compiler related api, and improved xml processing, jdbc auto driver loading.
+16) what are new features in java 7 => can represent binary number in java, and catching multiple exception in one catch block, dimond operator, try with resource, throw with type checking.
+17) give name of some design patterns.
+18) do you know how to create singleton design pattern?
+19) what is WSDL? what is diff between soap based and rest based web services.
+20) what is the servlet context object? => it is global and is only one. we can store variable which will be accessed by whole application.
+21) how many instances of servlet context will be there? => only one.
+22) what is the servlet config object ?
+23) what are the implicit object in jsp?
+24) what are the main features of Spring?
+25) what is autowire?
+26) what are the main interfaces in Spring? => applicationcontext, beanfactory, etc..
+27) what is diff between application context and beanfactory => in beanfactory there is no annotaiton support,
+      in beanfactory by default it is lazyloading, in applicatincontext it is by default aggressive loading.
+      beanfactory does not support event handling, event publishing.
+28) how you create bean objects?
+29) what are main interfaces in Hiberenate => Configuration, Session, Transaction, Criteria, Query, sessionfactory, etc..
+30) what is diff between load and get? =>
+    load -> will first search in cache, if it is not found, then it will look in database, if it is not found then it thorw exception.
+    get -> will always get data from database, if it is not found, it returns null.
+    If you are not sure whether data is there in database, then use get method, if you are sure then use load method.
+31) how you save data in database? => ..........
+32) Object heirachy in Hibernate? => thourgh inheritence mapping.
+33) you worked in sturts? how to configure?
+34) configuring servlet in web.xml.
+35) how you implemtent validation? => ...........
+36) what are actions in struts?
+
+PHOTON
+======
+1) what are the collections you used?
+2) I am using Hashmap, I am using Employee object as a key, any concerns?
+    => we need to override hashcode and equals methods.
+3) explain the workings or hashmap?
+4) have you heard about collison in hashmap in terms of elements?
+5) have you used any customized exceptions? ........
+6) have you ever used inner classes? and what scenario you used inner classes?
+7) what collection you use if a table row has 10 attributes, each row will be identified uniquily by four attributes.
+8) how used multithreading in your application? ......
+9) which version of spring you used? annotation based or xml based?
+10) explain spring flow in mvc. .......
+11) suppose I have a url as part of my application which will get me to welcome page, how you implement that? ........
+12) you are using @Controller, @Requestmapping. to enable that do you need to configure anything? => need to enable component-scan.
+13) how you add session for controller, how you add varibales to session? ...... @Session, etc........
+14) hibernate - by default will it load all objects? => no, it is lazyloading. Ok, then how to change that? => change lazy-init=false in xml.
+15) how you were mappling - xml based or annotation based ?
+16) how will I get automatically created sequence from a table to hibernate? .......
+17) have ever used any templating like hibernate template, etc..?
+18) how you implement hibernate template, there are two way, which one? ..........
+19) when you use autowire, what are different ways of injection, and what type resolution happen when injecting the bean? and what type of type of injectinf you are using? .......
+20) have you used jersy? what functionalities you used in jersy? and what is the diff between jersy restful services and
+      restful services that come as part of spring?
+21) how comfotable using Json object? ......
